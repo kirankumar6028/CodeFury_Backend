@@ -1,2 +1,14 @@
 # Project_Backend
-Project backend services
+
+Run the project
+``` 
+git clone git@github.com:sumukhah/Project_Backend.git
+cd Project_Backend
+npm i
+node ./app.js
+```
+
+* Mongo-DB Use mongo db data-base (https://docs.mongodb.com/manual/)
+* Use Express-js (https://expressjs.com/)
+* Use Mongoose to work with Database (https://mongoosejs.com/docs/index.html)
+* Use Robo-3T for database visualization (https://robomongo.org/)
