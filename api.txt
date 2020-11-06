@@ -1,0 +1,11 @@
+For user registeration{
+    Api:/users/register,
+    Inputs:firstName,lastName,email,password
+    Output:Access Token
+}
+
+For user login{
+    Api:/users/login,
+    Inputs:email,password
+    Output:Access token
+}
