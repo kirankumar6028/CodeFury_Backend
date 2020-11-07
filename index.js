@@ -3,6 +3,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 require("./src/db/mongodb");
 const auth = require("./src/middleware/authUser");
+const cors=require("cors");
 
 //Routers
 const userRouter = require("./src/routes/user");
@@ -14,6 +15,7 @@ const port = process.env.PORT || 3000;
 app.use(express.json());
 app.use(userRouter);
 app.use(workerRouter);
+app.use(cors());
 
 app.get("", auth, (req, res) => {
   res.send(req.user);
