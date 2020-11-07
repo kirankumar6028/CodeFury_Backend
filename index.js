@@ -8,6 +8,7 @@ const cors=require("cors");
 //Routers
 const userRouter = require("./src/routes/user");
 const workerRouter=require("./src/routes/workerInfo");
+const workerMatch=require("./src/routes/workerMatching");
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -15,6 +16,7 @@ const port = process.env.PORT || 3000;
 app.use(express.json());
 app.use(userRouter);
 app.use(workerRouter);
+app.use(workerMatch);
 app.use(cors());
 
 app.get("", auth, (req, res) => {

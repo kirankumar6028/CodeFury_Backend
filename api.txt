@@ -16,4 +16,8 @@ for worker{
     
     Api_for_img:/workerInfo/img
     inputs:img
+} 
+for searching{
+    Api:/workerMatch
+    input:[skill]
 }
