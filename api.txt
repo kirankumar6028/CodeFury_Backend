@@ -9,3 +9,11 @@ For user login{
     Inputs:email,password
     Output:Access token
 }
+
+for worker{
+    Api_for_data:/workerInfo
+      inputs:skill[String],expertise[],city,locality,conatctNumber,chargePerHour,owner,img
+    
+    Api_for_img:/workerInfo/img
+    inputs:img
+}

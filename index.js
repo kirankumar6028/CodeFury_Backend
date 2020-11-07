@@ -6,12 +6,14 @@ const auth = require("./src/middleware/authUser");
 
 //Routers
 const userRouter = require("./src/routes/user");
+const workerRouter=require("./src/routes/workerInfo");
 
 const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(express.json());
 app.use(userRouter);
+app.use(workerRouter);
 
 app.get("", auth, (req, res) => {
   res.send(req.user);
