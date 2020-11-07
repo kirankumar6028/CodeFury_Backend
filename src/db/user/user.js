@@ -25,21 +25,11 @@ const userSchema = new Schema({
     required: true,
     unique: true,
     trim: true,
-    validate(value) {
-      if (!validator.default.isEmail(value)) {
-        throw new Error("Email is invalid");
-      }
-    },
   },
   password: {
     type: String,
     required: true,
     trim: true,
-    validate(value) {
-      if (!validateUser.isLongEnough(value)) {
-        throw new Error("Too short password");
-      }
-    },
   },
 });
 

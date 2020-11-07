@@ -9,11 +9,6 @@ const workerSchema=new Schema({
     },
     expertise:{
      type:[Number],
-     validate(value) {
-        if (!validateUser.validate(value)) {
-          throw new Error("Enter between 1 and 5");
-        }
-      },
     },
 	city:{
 		type: String,	
